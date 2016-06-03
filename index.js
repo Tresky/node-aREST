@@ -338,7 +338,7 @@ module.exports = function (app) {
   });
 
   // Command
-  app.get('/:device/:command', function(req,res){
+  app.get('/send/:device/:command', function(req,res){
 
     console.log('Variable/function request sent to device: ' + req.params.device);
 
@@ -371,7 +371,7 @@ module.exports = function (app) {
   });
 
   // Digital write
-  app.get('/:device/digital/:pin/:value', function(req,res){
+  app.get('/send/:device/digital/:pin/:value', function(req,res){
 
     console.log('Digital write request sent to device: ' + req.params.device);
 
@@ -391,7 +391,7 @@ module.exports = function (app) {
   });
 
   // Analog read
-  app.get('/:device/analog/:pin/', function(req,res){
+  app.get('/send/:device/analog/:pin/', function(req,res){
 
     console.log('Analog read request sent to device: ' + req.params.device);
 
@@ -405,7 +405,7 @@ module.exports = function (app) {
   });
 
   // Analog Write
-  app.get('/:device/analog/:pin/:value', function(req,res){
+  app.get('/send/:device/analog/:pin/:value', function(req,res){
 
     console.log('Analog write request sent to device: ' + req.params.device);
 
@@ -419,7 +419,7 @@ module.exports = function (app) {
   });
 
   // Digital read
-  app.get('/:device/digital/:pin/', function(req,res){
+  app.get('/send/:device/digital/:pin/', function(req,res){
 
     console.log('Digital read request sent to device: ' + req.params.device);
 
@@ -433,7 +433,7 @@ module.exports = function (app) {
   });
 
   // Mode
-  app.get('/:device/mode/:pin/:value', function(req,res){
+  app.get('/send/:device/mode/:pin/:value', function(req,res){
 
     console.log('Mode request sent to device: ' + req.params.device);
 
@@ -447,7 +447,7 @@ module.exports = function (app) {
   });
   
    // Take picture (for RPi)
-  app.get('/:device/camera/snapshot', function(req,res){
+  app.get('/send/:device/camera/snapshot', function(req,res){
 
     console.log('Snapshot request sent to device: ' + req.params.device);
 
